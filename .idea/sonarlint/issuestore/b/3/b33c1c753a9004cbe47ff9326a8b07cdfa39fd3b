@@ -1,0 +1,10 @@
+
+•
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Çùí”J$df7f8607-b1e1-43a3-9863-521bf2793adb
+¬
+java:S1319T"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¸â–•J$09c484ba-c7a4-4bd3-bb83-9efd982c1975
+¦
+java:S1319X"jThe type of "studentIds" should be an interface such as "List" rather than the implementation "ArrayList".(çõ†ğJ$64e0c98b-c354-4f05-8529-856b3b5d2043
+«
+java:S1319d"jThe type of "studentIds" should be an interface such as "List" rather than the implementation "ArrayList".(²ŠïàşÿÿÿÿJ$2d00b09d-c213-4c20-a6b6-14266c260412
+	java:S107d"AConstructor has 9 parameters, which is greater than 7 authorized.(²ŠïàşÿÿÿÿJ$dfc5ce34-a3de-4067-8f47-ffd32b4f6141
