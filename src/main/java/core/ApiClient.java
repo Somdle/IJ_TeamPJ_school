@@ -11,35 +11,39 @@ import java.net.URLEncoder;
 public class ApiClient {
     static String apiUrl = "http://localhost:3000/api/students?id=";
 
-    public static <URLEncoderException> JSONObject HttpGet(String params_id) {
+    private static HttpRequest generateRequest(String params_id, String method, String body) throws Exception {
+        // JWT 토큰 생성
+        String token = JwtUtil.generateJwtToken("pcu_project");
+
+        // 문자열 인코딩 (http 에러 방지)
+        String encoded_params_id = URLEncoder.encode(params_id, "UTF-8");
+
+        // HttpRequest 생성
+        HttpRequest.Builder requestBuilder = HttpRequest.newBuilder()
+                .uri(URI.create(apiUrl + encoded_params_id))
+                .header("Authorization", "Bearer " + token);
+
+        if ("POST".equals(method)) {
+            return requestBuilder.POST(HttpRequest.BodyPublishers.ofString(body)).build();
+        } else if ("PUT".equals(method)) {
+            return requestBuilder.PUT(HttpRequest.BodyPublishers.ofString(body)).build();
+        } else if ("DELETE".equals(method)) {
+            return requestBuilder.DELETE().build();
+        } else {
+            return requestBuilder.GET().build();
+        }
+    }
+
+    public static JSONObject HttpGet(String params_id) {
         try {
-            // JWT 토큰 생성
-            String token = JwtUtil.generateJwtToken("pcu_project");
-
-            // 문자열 인코딩(http 에러 방지)
-            String encoded_params_id = URLEncoder.encode(params_id, "UTF-8");
-
-            // HttpClient 생성
-            HttpClient client = HttpClient.newHttpClient();
-
-            // HttpRequest 생성
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(apiUrl + encoded_params_id))
-                    .header("Authorization", "Bearer " + token)
-                    .GET()
-                    .build();
-
             // 요청 보내고 응답 받기
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            HttpResponse<String> response = HttpClient.newHttpClient()
+                    .send(generateRequest(params_id, "GET", null), HttpResponse.BodyHandlers.ofString());
 
             // 응답 코드 확인
             if (response.statusCode() == 200) {
                 // 응답 본문을 JSON 객체로 변환
-                JSONObject jsonResponse = new JSONObject(response.body());
-
-                // JSON 데이터 출력
-                // System.out.println(jsonResponse.toString(4)); // JSON을 예쁘게 출력
-                return jsonResponse;
+                return new JSONObject(response.body());
             } else {
                 System.out.println("HTTP error code: " + response.statusCode());
                 return null;
@@ -52,33 +56,14 @@ public class ApiClient {
 
     public static JSONObject HttpPost(String params_id, String body) {
         try {
-            // JWT 토큰 생성
-            String token = JwtUtil.generateJwtToken("pcu_project");
-
-            // 문자열 인코딩 (http 에러 방지)
-            String encoded_params_id = URLEncoder.encode(params_id, "UTF-8");
-
-            // HttpClient 생성
-            HttpClient client = HttpClient.newHttpClient();
-
-            // HttpRequest 생성
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(apiUrl + encoded_params_id))
-                    .header("Authorization", "Bearer " + token)
-                    .POST(HttpRequest.BodyPublishers.ofString(body)) // body 추가
-                    .build();
-
             // 요청 보내고 응답 받기
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            HttpResponse<String> response = HttpClient.newHttpClient()
+                    .send(generateRequest(params_id, "POST", body), HttpResponse.BodyHandlers.ofString());
 
             // 응답 코드 확인
             if (response.statusCode() == 200) {
                 // 응답 본문을 JSON 객체로 변환
-                JSONObject jsonResponse = new JSONObject(response.body());
-
-                // JSON 데이터 출력
-                // System.out.println(jsonResponse.toString(4)); // JSON을 예쁘게 출력
-                return jsonResponse;
+                return new JSONObject(response.body());
             } else {
                 System.out.println("HTTP error code: " + response.statusCode());
                 return null;
@@ -90,7 +75,9 @@ public class ApiClient {
     }
 
     public static void main(String[] args) {
-//        System.out.println(HttpGet("학생 식별자"));
+        // System.out.println(HttpGet("학생 식별자"));
         System.out.println(HttpPost("학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공\",\"grade\":\"학년\",\"name\":\"학생 이름\",\"lectures\":[\"수강 강의 ID 1\",\"수강 강의 ID 2\"],\"_id\":\"학생 식별자\"}"));
+        // System.out.println(HttpPut("학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공 수정\",\"grade\":\"학년 수정\",\"name\":\"학생 이름 수정\",\"lectures\":[\"수강 강의 ID 1 수정\",\"수강 강의 ID 2 수정\"],\"_id\":\"학생 식별자\"}"));
+        // System.out.println(HttpDelete("학생 식별자"));
     }
 }
