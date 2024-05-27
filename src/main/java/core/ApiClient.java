@@ -3,15 +3,18 @@ package core;
 import org.json.JSONObject;
 
 import java.net.URI;
+import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 
 public class ApiClient {
 
     public static void main(String[] args) {
         String studentId = "학생 식별자";
-        String url = "http://localhost:3000/api/students?id=" + studentId;
+        String encodedStudentId = URLEncoder.encode(studentId, StandardCharsets.UTF_8);
+        String url = "http://localhost:3000/api/students?id=" + encodedStudentId;
         String bearerToken = "pcu_project";
 
         try {
@@ -39,6 +42,7 @@ public class ApiClient {
                 System.out.println("HTTP error code: " + response.statusCode());
             }
         } catch (Exception e) {
+            System.out.println("ERR");
             e.printStackTrace();
         }
     }
