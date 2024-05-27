@@ -1,30 +1,35 @@
 package core;
 
 import org.json.JSONObject;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 
 import java.net.URI;
-import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.nio.charset.StandardCharsets;
+import java.util.Date;
+import java.net.URLEncoder;
 
 public class ApiClient {
 
     public static void main(String[] args) {
-        String studentId = "학생 식별자";
-        String encodedStudentId = URLEncoder.encode(studentId, StandardCharsets.UTF_8);
-        String url = "http://localhost:3000/api/students?id=" + encodedStudentId;
-        String bearerToken = "pcu_project";
-
         try {
+            // JWT 토큰 생성
+            String token = JwtUtil.createToken();
+
+            String originalString = "학생 식별자";
+            String encodedString = URLEncoder.encode(originalString, "UTF-8");
+            // API URL
+            String apiUrl = "http://localhost:3000/api/students?id=" + encodedString;
+
             // HttpClient 생성
             HttpClient client = HttpClient.newHttpClient();
 
             // HttpRequest 생성
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(url))
-                    .header("Authorization", "Bearer " + bearerToken)
+                    .uri(URI.create(apiUrl))
+                    .header("Authorization", "Bearer " + token)
                     .GET()
                     .build();
 
