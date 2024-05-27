@@ -24,8 +24,10 @@ public class ApiClient {
                 .header("Authorization", "Bearer " + token);
 
         if ("POST".equals(method)) {
+            requestBuilder.header("Content-Type", "application/json");
             return requestBuilder.POST(HttpRequest.BodyPublishers.ofString(body)).build();
         } else if ("PUT".equals(method)) {
+            requestBuilder.header("Content-Type", "application/json");
             return requestBuilder.PUT(HttpRequest.BodyPublishers.ofString(body)).build();
         } else if ("DELETE".equals(method)) {
             return requestBuilder.DELETE().build();
@@ -115,8 +117,8 @@ public class ApiClient {
     }
 
     public static void main(String[] args) {
-//         System.out.println(HttpGet("학생 식별자"));
-         System.out.println(HttpPost("학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공\",\"grade\":\"학년\",\"name\":\"학생 이름\",\"lectures\":[\"수강 강의 ID 1\",\"수강 강의 ID 2\"],\"_id\":\"학생 식별자\"}"));
+         System.out.println(HttpGet("학생 식별자"));
+//         System.out.println(HttpPost("학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공\",\"grade\":\"학년\",\"name\":\"학생 이름\",\"lectures\":[\"수강 강의 ID 1\",\"수강 강의 ID 2\"],\"_id\":\"학생 식별자\"}"));
 //         System.out.println(HttpPut("학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공 수정\",\"grade\":\"학년 수정\",\"name\":\"학생 이름 수정\",\"lectures\":[\"수강 강의 ID 1 수정\",\"수강 강의 ID 2 수정\"],\"_id\":\"학생 식별자\"}"));
 //         System.out.println(HttpDelete("학생 식별자"));
     }

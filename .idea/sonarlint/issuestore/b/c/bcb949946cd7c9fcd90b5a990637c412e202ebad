@@ -1,33 +1,32 @@
 
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(±é³™ÿÿÿÿÿ8§ê´Õû1J$14eaf005-0732-4425-ab4e-f6378720abfa
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(±é³™ÿÿÿÿÿ8ìÕóÕû1J$50517fe0-4268-443f-91e4-b1e2792e9c0e
 •
-java:S11920"RDefine a constant instead of duplicating this literal "HTTP error code: " 4 times.(­‡ë¨8îÜÈÕû1J$be2c3937-1b6c-4798-b90d-a5aefc57963f
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±é³™ÿÿÿÿÿ8©ê´Õû1J$9c390086-f040-4d29-94d0-ee352401158b
-“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¯±¶8©ê´Õû1J$912e6843-71e3-45a6-a505-9d586933e8d5
-˜	java:S117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òë„úøÿÿÿÿ8£„ÃÕû1J$efa60670-eb71-48f1-9e4f-02cc17f10471
-“	java:S1179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–‰÷Ô8£„ÃÕû1J$cd4eeac0-ceb4-493f-a783-48fd7fc54a64
-“	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞßªÀ8ïÜÈÕû1J$a3296f13-ee04-4dca-85cb-68f8fcc4a6b2
-˜	java:S117a"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æò¬ñøÿÿÿÿ8¥ÅËÕû1J$7e5a9609-93e6-4e8c-bdfe-7040d3506606
-•	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òë„úøÿÿÿÿ8´„ÃÕû1J$085d2282-c04f-4d1b-a41d-b8e80eb444fc
+java:S11922"RDefine a constant instead of duplicating this literal "HTTP error code: " 4 times.(­‡ë¨8îÜÈÕû1J$3587d50b-2f01-4cd1-9ef2-d03b8aaee2fb
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±é³™ÿÿÿÿÿ8©ê´Õû1J$eb8c2ba6-7f9b-4021-a51f-bbcf96dafe28
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¯±¶8©ê´Õû1J$e717b016-2cdc-4674-9caa-97ba57b1c95a
+˜	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òë„úøÿÿÿÿ8£„ÃÕû1J$64270275-2de5-4445-be03-e13f76fbebe7
+“	java:S117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–‰÷Ô8£„ÃÕû1J$7e4b939e-addb-4485-ab7a-9b8270a6bfd4
+“	java:S117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞßªÀ8ïÜÈÕû1J$83cf2a04-1649-441c-8b2b-b2e4c4f68d88
+˜	java:S117c"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æò¬ñøÿÿÿÿ8¥ÅËÕû1J$c21e5fa6-925d-4e60-84c3-63f86444fe66
+•	java:S100'"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òë„úøÿÿÿÿ8´„ÃÕû1J$f860db80-5493-4a14-b59b-0a34b2c22985
 ¡
-java:S21423"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8¶„ÃÕû1J$0ca6ce4e-cdf1-46cf-b9de-53b5f47ebf81
-m	java:S1060"+Replace this use of System.out by a logger.(­‡ë¨8¹„ÃÕû1J$60cbcf9c-3106-454e-b326-31e5d8d31010
-m	java:S1064"+Replace this use of System.out by a logger.(±Ë…8¹„ÃÕû1J$a20cc3ff-49d0-41c2-945c-c59b220bdde0
-	java:S1009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–‰÷Ô8¹„ÃÕû1J$16b53c26-92e2-4afb-98e9-96396a82a321
+java:S21425"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8¶„ÃÕû1J$09dc8444-1c83-482b-b610-a8da7ede0b1a
+m	java:S1062"+Replace this use of System.out by a logger.(­‡ë¨8»„ÃÕû1J$41ffbfba-d525-4e3c-8c8a-0fd1d01126aa
+m	java:S1066"+Replace this use of System.out by a logger.(±Ë…8»„ÃÕû1J$5c06c047-8c2a-475b-a2da-60c9293bbf4d
+	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–‰÷Ô8¹„ÃÕû1J$48a2dd0f-d36f-4a02-87e3-556a5c8f6fb4
 ¡
-java:S2142G"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8º„ÃÕû1J$d7095262-77d9-4f25-b235-dc00475820ad
-m	java:S106D"+Replace this use of System.out by a logger.(­‡ë¨8»„ÃÕû1J$90cbefa6-cb8a-4e7f-9540-3c78843b7111
-m	java:S106H"+Replace this use of System.out by a logger.(úÂˆß8»„ÃÕû1J$706c9d86-43c8-4c07-ac09-4ddb1bb09c57
-	java:S100M"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞßªÀ8™İÈÕû1J$c5821dc4-a30f-45f0-8e09-bebcd580431a
+java:S2142I"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8º„ÃÕû1J$e07b101e-f8bf-42b1-9cd5-af8a729dcc8c
+m	java:S106F"+Replace this use of System.out by a logger.(­‡ë¨8»„ÃÕû1J$0a24e8b0-408d-4227-a3a1-e07c4a941508
+m	java:S106J"+Replace this use of System.out by a logger.(úÂˆß8İÈÕû1J$b4ffa0b5-918a-4363-a6f9-2af00ad29dae
+	java:S100O"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞßªÀ8™İÈÕû1J$730f2f08-e9db-4d33-8580-c392359ad5dc
 ¡
-java:S2142["^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8›İÈÕû1J$ab84cc72-8d3f-47ad-beb9-12df4b42feb0
-m	java:S106X"+Replace this use of System.out by a logger.(­‡ë¨8»„ÃÕû1J$0676a6f1-4cc7-40a5-8f7f-28671c82f03e
-m	java:S106\"+Replace this use of System.out by a logger.(úÂˆß8İÈÕû1J$9c6f4706-0121-4536-8a4b-e7401b69c7d0
-•	java:S100a"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æò¬ñøÿÿÿÿ8ûòÈÕû1J$f00355c4-9a25-4941-b4c0-40ae68292007
+java:S2142]"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8›İÈÕû1J$14b1e4ca-e640-44dc-bcd2-960e2dbf9a23
+m	java:S106Z"+Replace this use of System.out by a logger.(­‡ë¨8şòÈÕû1J$6c1fb9b0-885d-446a-94be-5ca52b4ec2f6
+m	java:S106^"+Replace this use of System.out by a logger.(úÂˆß8ÉÅËÕû1J$5795b432-684e-4f4e-8379-a119e9f96ba0
+•	java:S100c"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æò¬ñøÿÿÿÿ8ûòÈÕû1J$a3d4fac1-fc30-4cfb-b7cc-5648437ad118
 ¡
-java:S2142o"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8ÇÅËÕû1J$f4a49040-1a2a-48bb-b44d-6a9f6136628e
-m	java:S106l"+Replace this use of System.out by a logger.(­‡ë¨8şòÈÕû1J$f1fe7317-3f14-43a6-8b94-029953dafdf1
-m	java:S106p"+Replace this use of System.out by a logger.(±Ë…8ÉÅËÕû1J$75dbd19e-96ae-4e41-912a-0b0b2370f01c
-r	java:S106w"+Replace this use of System.out by a logger.(æ«ºŒøÿÿÿÿ8ÉÁØÕû1J$a7c3e03c-f859-4c24-9af8-3d58c53ea8b5
-~	java:S125v"<This block of commented-out lines of code should be removed.(œœƒ¡8ã²×Õû1J$6972c9c1-b545-448c-ada8-d3bab5425825
-ƒ	java:S125x"<This block of commented-out lines of code should be removed.(–·ûŒÿÿÿÿÿ8ÜâÕû1J$d2094704-5f40-4a03-b677-3719e1a7fb7c
+java:S2142q"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8ÇÅËÕû1J$01e98cd9-4d84-44fb-9695-a4c90c30c807
+m	java:S106n"+Replace this use of System.out by a logger.(­‡ë¨8ÉÁØÕû1J$5acba7d5-d1a8-4e66-a8fa-9e58a712b78d
+m	java:S106r"+Replace this use of System.out by a logger.(±Ë…8ÖóÕû1J$b462b2bc-d9a2-4b00-a69e-287db2df2076
+m	java:S106x"+Replace this use of System.out by a logger.(é˜Áº8É‹†Öû1J$78f72f5c-3531-4da6-af31-6f7a0f7a635d
+}	java:S125y"<This block of commented-out lines of code should be removed.(²ªÀ~8Ê‹†Öû1J$fdfd76f6-1f71-475d-84c6-3c5767c1b7cf
