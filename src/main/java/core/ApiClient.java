@@ -1,34 +1,30 @@
 package core;
 
 import org.json.JSONObject;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.Date;
 import java.net.URLEncoder;
 
 public class ApiClient {
+    static String apiUrl = "http://localhost:3000/api/students?id=";
 
-    public static void main(String[] args) {
+    public static <URLEncoderException> JSONObject HttpGet(String params_id) {
         try {
             // JWT 토큰 생성
-            String token = JwtUtil.generateJwtToken();
+            String token = JwtUtil.generateJwtToken("pcu_project");
 
-            String originalString = "학생 식별자";
-            String encodedString = URLEncoder.encode(originalString, "UTF-8");
-            // API URL
-            String apiUrl = "http://localhost:3000/api/students?id=" + encodedString;
+            // 문자열 인코딩(http 에러 방지)
+            String encoded_params_id = URLEncoder.encode(params_id, "UTF-8");
 
             // HttpClient 생성
             HttpClient client = HttpClient.newHttpClient();
 
             // HttpRequest 생성
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(apiUrl))
+                    .uri(URI.create(apiUrl + encoded_params_id))
                     .header("Authorization", "Bearer " + token)
                     .GET()
                     .build();
@@ -42,13 +38,19 @@ public class ApiClient {
                 JSONObject jsonResponse = new JSONObject(response.body());
 
                 // JSON 데이터 출력
-                System.out.println(jsonResponse.toString(4)); // JSON을 예쁘게 출력
+                // System.out.println(jsonResponse.toString(4)); // JSON을 예쁘게 출력
+                return jsonResponse;
             } else {
                 System.out.println("HTTP error code: " + response.statusCode());
+                return null;
             }
         } catch (Exception e) {
-            System.out.println("ERR");
-            e.printStackTrace();
+            System.out.println("Http get error: " + e.toString());
+            return null;
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(HttpGet("학생 식별자"));
     }
 }

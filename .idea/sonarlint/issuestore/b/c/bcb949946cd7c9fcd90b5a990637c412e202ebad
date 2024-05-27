@@ -1,12 +1,14 @@
 
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È®¨£8úÕ‡Õû1J$04975b8b-4452-4e68-8da8-9437fede30a7
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¯±¶8ûÕ‡Õû1J$f5ecaef2-0ee3-44b2-baf7-c4624c0e8d3f
+¬
+java:S1488&"dImmediately return this expression instead of assigning it to the temporary variable "jsonResponse".(ªµÒûÿÿÿÿ8ûÕ‡Õû1J$ae1738f0-eaac-4f40-a670-80db2c1954ea
+	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È®¨£8ŠÖ‡Õû1J$03ae2454-707c-4180-a383-6f5c5b659378
+q
+java:S2326".URLEncoderException is not used in the method.(È®¨£8‹Ö‡Õû1J$c19f0b98-014b-4d50-af21-d66d056004bb
+‹	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(È®¨£8‹Ö‡Õû1J$ba8148f1-6c04-453d-8c0e-79e2ff3fed0a
 ¡
-java:S21421"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8‹´ƒĞû1J$ffbecb52-241d-4807-9982-e1f0d4d4e276
-r	java:S106-"+Replace this use of System.out by a logger.(œ‚Ö–ÿÿÿÿÿ8’´ƒĞû1J$4e9fed4b-ba34-4384-8d4c-6a8bb6bbb3e5
-m	java:S106/"+Replace this use of System.out by a logger.(­‡ë¨8•´ƒĞû1J$664f880a-ea3f-40eb-85cd-de094be3c64c
-r	java:S1062"+Replace this use of System.out by a logger.(¸İ¤ùøÿÿÿÿ8—´ƒĞû1J$efbee16a-f124-4a85-9154-ee463118b734
-t
-java:S1128"1Remove this unused import 'io.jsonwebtoken.Jwts'.(íğœ±8àÕÊÑû1J$0e4a64bf-a402-440c-a046-1eae61864f18
-
-java:S1128"?Remove this unused import 'io.jsonwebtoken.SignatureAlgorithm'.(ç±«g8àÕÊÑû1J$5882926e-df13-4c74-b106-323fc760a025
-n
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8áÕÊÑû1J$a4ac3dc8-d314-403e-ab22-3a92e1d7c866
+java:S2142/"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8Ö‡Õû1J$68c1424b-4987-462a-abe6-62dfef210e31
+m	java:S106,"+Replace this use of System.out by a logger.(­‡ë¨8‘Ö‡Õû1J$fa52e10e-fe9b-4eda-84b6-deda3404cce8
+m	java:S1060"+Replace this use of System.out by a logger.(±Ë…8‘Ö‡Õû1J$be27d7e9-c01a-44ad-9768-413e49f4579a
+m	java:S1066"+Replace this use of System.out by a logger.(é˜Áº8’Ö‡Õû1J$11568ded-c4f7-46eb-b86f-ecc6e486d9d2
