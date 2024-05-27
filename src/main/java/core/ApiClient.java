@@ -74,10 +74,50 @@ public class ApiClient {
         }
     }
 
+    public static JSONObject HttpPut(String params_id, String body) {
+        try {
+            // 요청 보내고 응답 받기
+            HttpResponse<String> response = HttpClient.newHttpClient()
+                    .send(generateRequest(params_id, "PUT", body), HttpResponse.BodyHandlers.ofString());
+
+            // 응답 코드 확인
+            if (response.statusCode() == 200) {
+                // 응답 본문을 JSON 객체로 변환
+                return new JSONObject(response.body());
+            } else {
+                System.out.println("HTTP error code: " + response.statusCode());
+                return null;
+            }
+        } catch (Exception e) {
+            System.out.println("Http POST error: " + e.toString());
+            return null;
+        }
+    }
+
+    public static JSONObject HttpDelete(String params_id) {
+        try {
+            // 요청 보내고 응답 받기
+            HttpResponse<String> response = HttpClient.newHttpClient()
+                    .send(generateRequest(params_id, "DELETE", null), HttpResponse.BodyHandlers.ofString());
+
+            // 응답 코드 확인
+            if (response.statusCode() == 200) {
+                // 응답 본문을 JSON 객체로 변환
+                return new JSONObject(response.body());
+            } else {
+                System.out.println("HTTP error code: " + response.statusCode());
+                return null;
+            }
+        } catch (Exception e) {
+            System.out.println("Http get error: " + e.toString());
+            return null;
+        }
+    }
+
     public static void main(String[] args) {
-        // System.out.println(HttpGet("학생 식별자"));
-        System.out.println(HttpPost("학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공\",\"grade\":\"학년\",\"name\":\"학생 이름\",\"lectures\":[\"수강 강의 ID 1\",\"수강 강의 ID 2\"],\"_id\":\"학생 식별자\"}"));
-        // System.out.println(HttpPut("학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공 수정\",\"grade\":\"학년 수정\",\"name\":\"학생 이름 수정\",\"lectures\":[\"수강 강의 ID 1 수정\",\"수강 강의 ID 2 수정\"],\"_id\":\"학생 식별자\"}"));
-        // System.out.println(HttpDelete("학생 식별자"));
+//         System.out.println(HttpGet("학생 식별자"));
+         System.out.println(HttpPost("학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공\",\"grade\":\"학년\",\"name\":\"학생 이름\",\"lectures\":[\"수강 강의 ID 1\",\"수강 강의 ID 2\"],\"_id\":\"학생 식별자\"}"));
+//         System.out.println(HttpPut("학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공 수정\",\"grade\":\"학년 수정\",\"name\":\"학생 이름 수정\",\"lectures\":[\"수강 강의 ID 1 수정\",\"수강 강의 ID 2 수정\"],\"_id\":\"학생 식별자\"}"));
+//         System.out.println(HttpDelete("학생 식별자"));
     }
 }
