@@ -26,4 +26,9 @@ public class JwtUtil {
 
         return jwt;
     }
+
+    public static void main(String[] args) {
+        String token = createToken();
+        System.out.println("Generated JWT Token: " + token);
+    }
 }

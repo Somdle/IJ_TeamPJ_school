@@ -29,7 +29,7 @@ public class ApiClient {
             // HttpRequest 생성
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(apiUrl))
-                    .header("Authorization", "Bearer " + token)
+                    .header("Authorization", "Bearer " + "token")
                     .GET()
                     .build();
 
