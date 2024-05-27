@@ -10,10 +10,20 @@ import java.net.URLEncoder;
 
 public class ApiClient {
     static String apiUrl = "http://localhost:3000/api";
+    static String secret = "pcu_project";
+
+    public ApiClient(String apiUrl, String secret) {
+        this.apiUrl = apiUrl;
+        this.secret = secret;
+    }
+
+    public ApiClient(){
+
+    }
 
     private static HttpRequest generateRequest(String domain, String params_id, String method, String body) throws Exception {
         // JWT 토큰 생성
-        String token = JwtUtil.generateJwtToken("pcu_project");
+        String token = JwtUtil.generateJwtToken(secret);
 
         // 문자열 인코딩 (http 에러 방지)
         String encoded_params_id = URLEncoder.encode(params_id, "UTF-8");
@@ -117,9 +127,22 @@ public class ApiClient {
     }
 
     public static void main(String[] args) {
-         System.out.println(HttpGet("students", "학생 식별자"));
-//         System.out.println(HttpPost("students", "학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공\",\"grade\":\"학년\",\"name\":\"학생 이름\",\"lectures\":[\"수강 강의 ID 1\",\"수강 강의 ID 2\"],\"_id\":\"학생 식별자\"}"));
-//         System.out.println(HttpPut("students", "학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공 수정\",\"grade\":\"학년 수정\",\"name\":\"학생 이름 수정\",\"lectures\":[\"수강 강의 ID 1 수정\",\"수강 강의 ID 2 수정\"],\"_id\":\"학생 식별자\"}"));
-//         System.out.println(HttpDelete("students", "학생 식별자"));
+        switch (1) {
+            case 1: // 조회
+                System.out.println(HttpGet("students", "학생 식별자"));
+                break;
+            case 2: // 추가
+                System.out.println(HttpPost("students", "학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공\",\"grade\":\"학년\",\"name\":\"학생 이름\",\"lectures\":[\"수강 강의 ID 1\",\"수강 강의 ID 2\"],\"_id\":\"학생 식별자\"}"));
+                break;
+            case 3: // 수정
+                System.out.println(HttpPut("students", "학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공 수정\",\"grade\":\"학년 수정\",\"name\":\"학생 이름 수정\",\"lectures\":[\"수강 강의 ID 1 수정\",\"수강 강의 ID 2 수정\"],\"_id\":\"학생 식별자\"}"));
+                break;
+            case 4: // 제거
+                System.out.println(HttpDelete("students", "학생 식별자"));
+                break;
+            default:
+                System.out.println("Usage: 1 ~ 4");
+                break;
+        }
     }
 }
