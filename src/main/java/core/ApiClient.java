@@ -16,7 +16,7 @@ public class ApiClient {
     public static void main(String[] args) {
         try {
             // JWT 토큰 생성
-            String token = JwtUtil.createToken();
+            String token = JwtUtil.generateJwtToken();
 
             String originalString = "학생 식별자";
             String encodedString = URLEncoder.encode(originalString, "UTF-8");

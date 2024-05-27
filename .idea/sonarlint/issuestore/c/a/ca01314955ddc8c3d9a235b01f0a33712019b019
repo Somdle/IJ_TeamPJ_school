@@ -1,6 +1,6 @@
 
-£
-java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "jwt".(ª¤ƒÿÿÿÿÿ8ÓßÏĞû1J$ab317dc4-12e0-4847-8eee-bc9f303d7e2d
+¨
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "jwtToken".(“Øçüÿÿÿÿ8ÙµÑû1J$f4af0a7d-9398-4467-aa7d-ae8f69d7955f
 ~
-java:S6437"6Revoke and change this password, as it is compromised.(¦šìöıÿÿÿÿ8òßÏĞû1J$ef1920b8-6f54-401a-b896-071067bfde2e
-r	java:S106 "+Replace this use of System.out by a logger.(şÙ¼Éøÿÿÿÿ8éã¥Ñû1J$d458866f-9c9b-4dac-8faa-13da11ef3edc
+java:S6437"6Revoke and change this password, as it is compromised.(å‰¨‰ûÿÿÿÿ8œÂÑû1J$faa65f99-5aaa-45d6-ada1-1adc67afbf26
+m	java:S106""+Replace this use of System.out by a logger.(›¦²õ8‰ÙµÑû1J$480888f5-e016-4bb6-b70d-6d6fcc833fe5

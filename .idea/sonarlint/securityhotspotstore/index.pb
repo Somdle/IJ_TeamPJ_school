@@ -13,3 +13,9 @@ Q
 !src/main/java/core/ApiClient.java,b\c\bcb949946cd7c9fcd90b5a990637c412e202ebad
 O
 src/main/java/core/JwtUtil.java,c\a\ca01314955ddc8c3d9a235b01f0a33712019b019
+Å
+Q.idea/sonarlint/securityhotspotstore/c/a/ca01314955ddc8c3d9a235b01f0a33712019b019,a\c\ac223afa7d3b2a5ac7ede440dd2d6fed49048d43
+w
+G.idea/sonarlint/issuestore/a/c/ac223afa7d3b2a5ac7ede440dd2d6fed49048d43,2\d\2d26a5f008e7bcd274fbcf24f676f14a01dd12fd
+Å
+Q.idea/sonarlint/securityhotspotstore/a/c/ac223afa7d3b2a5ac7ede440dd2d6fed49048d43,4\3\4340774fce3f0ca6d5173c753c3a43c9d7467995

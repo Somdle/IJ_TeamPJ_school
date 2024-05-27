@@ -1,16 +1,12 @@
 
-
-java:S1854"9Remove this useless assignment to local variable "token".(õı¹Ãùÿÿÿÿ8Ìè¬Ñû1J$ee7a8c96-5b18-48d3-9d99-918b58465f48
 ¡
-java:S21421"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8‹´ƒĞû1J$26fc3ef9-43e4-445f-a6bb-493ed3046219
-r
-java:S1481"*Remove this unused "token" local variable.(õı¹Ãùÿÿÿÿ8Ğè¬Ñû1J$2af0bbdb-0037-4eb5-807a-cca60e94c2d3
-r	java:S106-"+Replace this use of System.out by a logger.(œ‚Ö–ÿÿÿÿÿ8’´ƒĞû1J$b93076cb-d5ed-4e64-99b7-3d4d0f0c2211
-m	java:S106/"+Replace this use of System.out by a logger.(­‡ë¨8•´ƒĞû1J$97082f8f-5271-4452-84a4-8977498e0e46
-r	java:S1062"+Replace this use of System.out by a logger.(¸İ¤ùøÿÿÿÿ8—´ƒĞû1J$3d88c13f-0c36-4b03-9c91-3790788238ba
+java:S21421"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8‹´ƒĞû1J$ffbecb52-241d-4807-9982-e1f0d4d4e276
+r	java:S106-"+Replace this use of System.out by a logger.(œ‚Ö–ÿÿÿÿÿ8’´ƒĞû1J$4e9fed4b-ba34-4384-8d4c-6a8bb6bbb3e5
+m	java:S106/"+Replace this use of System.out by a logger.(­‡ë¨8•´ƒĞû1J$664f880a-ea3f-40eb-85cd-de094be3c64c
+r	java:S1062"+Replace this use of System.out by a logger.(¸İ¤ùøÿÿÿÿ8—´ƒĞû1J$efbee16a-f124-4a85-9154-ee463118b734
 t
-java:S1128"1Remove this unused import 'io.jsonwebtoken.Jwts'.(íğœ±8Á¥ˆÑû1J$55b52cc0-20e9-49a6-9d0d-6001165b2987
+java:S1128"1Remove this unused import 'io.jsonwebtoken.Jwts'.(íğœ±8àÕÊÑû1J$0e4a64bf-a402-440c-a046-1eae61864f18
 
-java:S1128"?Remove this unused import 'io.jsonwebtoken.SignatureAlgorithm'.(ç±«g8Á¥ˆÑû1J$0e1f0c64-d340-4913-bc1a-277e9d9daec5
+java:S1128"?Remove this unused import 'io.jsonwebtoken.SignatureAlgorithm'.(ç±«g8àÕÊÑû1J$5882926e-df13-4c74-b106-323fc760a025
 n
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8Á¥ˆÑû1J$49a81d0f-8a3e-4873-b563-d4c178e32318
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8áÕÊÑû1J$a4ac3dc8-d314-403e-ab22-3a92e1d7c866

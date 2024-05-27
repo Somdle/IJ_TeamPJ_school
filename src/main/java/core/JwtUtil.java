@@ -4,31 +4,33 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 import java.util.Date;
+import java.util.Base64;
 
 public class JwtUtil {
-    private static final String SECRET_KEY = "pcu_project";
 
-    public static String createToken() {
-        long nowMillis = System.currentTimeMillis();
-        Date now = new Date(nowMillis);
+    public static String generateJwtToken() {
+        // Secret key (use your own secret)
+        String secret = "pcu_project"; // Your secret key
 
-        // 토큰 만료 시간 설정 (예: 현재로부터 1시간 후)
-        long expMillis = nowMillis + 3600000;
-        Date exp = new Date(expMillis);
+        // Encode the secret key using Base64
+        byte[] secretBytes = Base64.getEncoder().encode(secret.getBytes());
+        String base64Secret = new String(secretBytes);
 
-        // JWT 토큰 생성
-        String jwt = Jwts.builder()
-                .setSubject("user") // 예시로 'user'를 subject로 사용
-                .setIssuedAt(now)
-                .setExpiration(exp)
-                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
+        // Token expiration time (e.g., 1 hour from now)
+        long expirationMillis = System.currentTimeMillis() + 3600000; // 1 hour
+
+        // Create a JWT token
+        String jwtToken = Jwts.builder()
+                .setSubject("user123") // Set the subject (user ID or any identifier)
+                .setExpiration(new Date(expirationMillis)) // Set token expiration time
+                .signWith(SignatureAlgorithm.HS256, base64Secret) // Sign with HS256 algorithm and secret key
                 .compact();
 
-        return jwt;
+        return jwtToken;
     }
 
     public static void main(String[] args) {
-        String token = createToken();
-        System.out.println("Generated JWT Token: " + token);
+        String token = generateJwtToken();
+        System.out.println("Generated JWT token: " + token);
     }
 }
