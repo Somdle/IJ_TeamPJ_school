@@ -140,6 +140,46 @@ public class ApiClient {
             case 4: // 제거
                 System.out.println(HttpDelete("students", "학생 식별자"));
                 break;
+
+            case 5: // 조회
+                System.out.println(HttpGet("lectures", "강의 식별자"));
+                break;
+            case 6: // 추가
+                System.out.println(HttpPost("lectures", "강의 식별자", "{\n" +
+                        "    \"_id\": \"강의 식별자\",\n" +
+                        "    \"lectureId\": \"강의 ID\",\n" +
+                        "    \"name\": \"강의명\",\n" +
+                        "    \"professor\": \"담당교수\",\n" +
+                        "    \"classRoom\": \"강의실 위치\",\n" +
+                        "    \"date\": \"강의 날짜\",\n" +
+                        "    \"startTime\": \"강의 시작 시간 (교시 단위)\",\n" +
+                        "    \"endTime\": \"강의 종료 시간 (교시 단위)\",\n" +
+                        "    \"students\": [\n" +
+                        "      \"수강 학생 ID\",\n" +
+                        "      \"수강 학생 ID\"\n" +
+                        "    ]\n" +
+                        "}"));
+                break;
+            case 7:
+                System.out.println(HttpPut("lectures", "강의 식별자", "{\n" +
+                        "    \"_id\": \"강의 식별자\",\n" +
+                        "    \"lectureId\": \"강의 ID\",\n" +
+                        "    \"name\": \"강의명\",\n" +
+                        "    \"professor\": \"홍길동\",\n" +
+                        "    \"classRoom\": \"강의실 위치\",\n" +
+                        "    \"date\": \"강의 날짜\",\n" +
+                        "    \"startTime\": \"강의 시작 시간 (교시 단위)\",\n" +
+                        "    \"endTime\": \"강의 종료 시간 (교시 단위)\",\n" +
+                        "    \"students\": [\n" +
+                        "      \"수강 학생 ID\",\n" +
+                        "      \"수강 학생 ID\"\n" +
+                        "    ]\n" +
+                        "}"));
+                break;
+            case 8:
+                System.out.println(HttpDelete("lectures", "강의 식별자"));
+                break;
+
             default:
                 System.out.println("Usage: 1 ~ 4");
                 break;
