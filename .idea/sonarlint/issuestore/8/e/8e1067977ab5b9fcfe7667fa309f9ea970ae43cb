@@ -1,2 +1,17 @@
 
-r	java:S106"+Replace this use of System.out by a logger.(½¦ÿÿÿÿÿ8î—œÉû1J$99325d64-402a-49bc-85dc-4bacc92a67e5
+~
+java:S1854";Remove this useless assignment to local variable "lecture".(©‡€8ãæ¦ı1J$760a9571-de43-4560-9d97-f5b7515dec3d
+ƒ
+java:S1854";Remove this useless assignment to local variable "student".(­‹×Òûÿÿÿÿ8å«¤ı1J$3bae6818-ea8b-432e-b734-97cad27ea0fd
+t
+java:S1481",Remove this unused "student" local variable.(­‹×Òûÿÿÿÿ8ç«¤ı1J$993506a9-ab3b-4c5f-bb82-aa4e848273d9
+o
+java:S1481",Remove this unused "lecture" local variable.(©‡€8çæ¦ı1J$ea4578e1-b562-40d1-97ba-93f89edc60b3
+w
+java:S1128"/Remove this unused import 'org.json.JSONArray'.(¬¸Ê’üÿÿÿÿ8ÚÛ¥ı1J$e763e7a3-ccb4-4dbe-807e-ed470b7b0606
+{
+java:S1128"3Remove this unused import 'org.json.JSONException'.(¹Ó·úÿÿÿÿ8ÚÛ¥ı1J$94fc7452-2b75-4e51-b552-b7ed523d1b02
+x
+java:S1128"0Remove this unused import 'org.json.JSONObject'.(œÖ´üşÿÿÿÿ8ÚÛ¥ı1J$315ff026-7145-4a24-a572-29f91bcb7314
+s
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÚÛ¥ı1J$ce2251ab-fd80-4729-bdf1-4eb1a70c8ddf

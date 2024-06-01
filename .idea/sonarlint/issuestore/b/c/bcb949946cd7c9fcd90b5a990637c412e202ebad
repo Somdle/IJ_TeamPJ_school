@@ -1,5 +1,4 @@
 
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(õèÍÇùÿÿÿÿ8ÛîÒïû1J$ebe2fd7a-61f5-4371-b8bd-ac43f9a24c0e
 •
 java:S1192„"QDefine a constant instead of duplicating this literal "í•™ìƒ ì‹ë³„ì" 4 times.(¹š­8ıÍ˜ïû1J$94c7728e-6b2d-4148-9dfa-72b92b39fa76
 
@@ -16,6 +15,14 @@ java:S1192<"RDefine a constant instead of duplicating this literal "HTTP error 
 ˜	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªî‹Àúÿÿÿÿ8‡Î˜ïû1J$734ea84c-7e98-402c-98b4-339cc4aa0df0
 “	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ñ‹È8ŞÛÌïû1J$67b278c7-29eb-42af-a4ac-35cda436f8b4
 “	java:S117m"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øæî‚8 ‡Òïû1J$0abd3f5f-921a-487c-980c-029da19e1080
+V
+java:S3516m"9Refactor this method to not always return the same value.(øæî‚8˜Ê…ı1
+V
+java:S3516Y"9Refactor this method to not always return the same value.(¹ñ‹È8™Ê…ı1
+[
+java:S3516E"9Refactor this method to not always return the same value.(ªî‹Àúÿÿÿÿ8›Ê…ı1
+V
+java:S35161"9Refactor this method to not always return the same value.(ÔÔ÷Ÿ8œÊ…ı1
 f
 java:S3010"#Remove this assignment of "apiUrl".(»í8«Î˜ïû1J$80a26a4b-4540-4922-a0eb-ef31e15f8340
 f
