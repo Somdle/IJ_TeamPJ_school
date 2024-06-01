@@ -26,7 +26,8 @@ public class ApiClient {
         String token = JwtUtil.generateJwtToken(secret);
 
         // 문자열 인코딩 (http 에러 방지)
-        String encoded_params_id = URLEncoder.encode(params_id, "UTF-8").replace("%3D", "=");
+        String encoded_params_id = URLEncoder.encode(params_id, "UTF-8").replace("%3D", "=").replace("%26", "&");
+        System.out.println(encoded_params_id);
 
         // HttpRequest 생성
         HttpRequest.Builder requestBuilder = HttpRequest.newBuilder()
@@ -127,7 +128,7 @@ public class ApiClient {
     }
 
     public static void main(String[] args) {
-        switch (5) {
+        switch (1) {
                 // 학생
             case 1: // 조회
                 System.out.println(HttpGet("students", "id=학생 식별자"));
@@ -181,6 +182,15 @@ public class ApiClient {
                 break;
             case 8:
                 System.out.println(HttpDelete("lectures", "id=강의 식별자"));
+                break;
+
+
+                // 학생 강의 매칭
+            case 9:
+                System.out.println(HttpPost("studentsLectures", "studentId=학생 식별자&lectureId=강의 식별자", ""));
+                break;
+            case 10:
+                System.out.println(HttpDelete("studentsLectures", "studentId=학생 식별자&lectureId=강의 식별자"));
                 break;
 
             default:
