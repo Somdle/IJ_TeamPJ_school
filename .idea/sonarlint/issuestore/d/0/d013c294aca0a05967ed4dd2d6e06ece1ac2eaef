@@ -1,9 +1,9 @@
 
 š
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ïˆ£½ùÿÿÿÿJ$0da55340-e0a6-4df6-87b8-86956c4be13c
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ïˆ£½ùÿÿÿÿJ$2cf963fa-31ba-4e68-b4ec-970d370b3d9a
 ±
-java:S13199"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(˜‘£ŽûÿÿÿÿJ$c279d966-abd0-4566-b280-b9fcef2485e9
+java:S13199"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(˜‘£ŽûÿÿÿÿJ$dd29588a-ac38-4a39-ad46-3d0f97405c73
 §
-java:S1319="kThe type of "lecturesIds" should be an interface such as "List" rather than the implementation "ArrayList".(—£±„J$f18dba76-db7c-42a4-8a19-55169d01f775
+java:S1319="kThe type of "lecturesIds" should be an interface such as "List" rather than the implementation "ArrayList".(—£±„J$82a6f8bb-a356-4a80-ac93-1ca3c63fc1f1
 §
-java:S1319I"kThe type of "lecturesIds" should be an interface such as "List" rather than the implementation "ArrayList".(×ÂµËJ$6911a2b6-5c20-4118-92a3-4424b1efef99
+java:S1319I"kThe type of "lecturesIds" should be an interface such as "List" rather than the implementation "ArrayList".(×ÂµËJ$3065d5b8-4e6f-45a3-a616-9f6358013a5b

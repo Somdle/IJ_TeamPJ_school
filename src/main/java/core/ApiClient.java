@@ -27,7 +27,6 @@ public class ApiClient {
 
         // 문자열 인코딩 (http 에러 방지)
         String encoded_params_id = URLEncoder.encode(params_id, "UTF-8").replace("%3D", "=").replace("%26", "&");
-        System.out.println(encoded_params_id);
 
         // HttpRequest 생성
         HttpRequest.Builder requestBuilder = HttpRequest.newBuilder()

@@ -1,17 +1,21 @@
 
-~
-java:S1854";Remove this useless assignment to local variable "lecture".(©‡€8ãæ¦ı1J$760a9571-de43-4560-9d97-f5b7515dec3d
-ƒ
-java:S1854";Remove this useless assignment to local variable "student".(­‹×Òûÿÿÿÿ8å«¤ı1J$3bae6818-ea8b-432e-b734-97cad27ea0fd
-t
-java:S1481",Remove this unused "student" local variable.(­‹×Òûÿÿÿÿ8ç«¤ı1J$993506a9-ab3b-4c5f-bb82-aa4e848273d9
-o
-java:S1481",Remove this unused "lecture" local variable.(©‡€8çæ¦ı1J$ea4578e1-b562-40d1-97ba-93f89edc60b3
-w
-java:S1128"/Remove this unused import 'org.json.JSONArray'.(¬¸Ê’üÿÿÿÿ8ÚÛ¥ı1J$e763e7a3-ccb4-4dbe-807e-ed470b7b0606
-{
-java:S1128"3Remove this unused import 'org.json.JSONException'.(¹Ó·úÿÿÿÿ8ÚÛ¥ı1J$94fc7452-2b75-4e51-b552-b7ed523d1b02
-x
-java:S1128"0Remove this unused import 'org.json.JSONObject'.(œÖ´üşÿÿÿÿ8ÚÛ¥ı1J$315ff026-7145-4a24-a572-29f91bcb7314
-s
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÚÛ¥ı1J$ce2251ab-fd80-4729-bdf1-4eb1a70c8ddf
+‡
+java:S2583?"DChange this condition so that it does not always evaluate to "false"(Û‚Äî8îª¥Ÿı1J$4cee33fc-f5cf-4adb-a389-50baf8a4f23f
+r	java:S106
+"+Replace this use of System.out by a logger.(ÓŠ£µıÿÿÿÿ8û”Ÿı1J$03284c6d-6c02-4e77-8665-15a3f88184ad
+m	java:S106"+Replace this use of System.out by a logger.(” ê»8û”Ÿı1J$89e0e863-4c50-4d38-a1f6-35f1f8353eea
+m	java:S106"+Replace this use of System.out by a logger.(¯éè¶8û”Ÿı1J$5ef054fc-dd51-4759-a805-83fb324132ba
+m	java:S106"+Replace this use of System.out by a logger.(ÄÅ†“8û”Ÿı1J$b9da4398-79a6-494e-94eb-8b86b49bea45
+m	java:S106"+Replace this use of System.out by a logger.(ÇĞÖ8û”Ÿı1J$81fce638-94b8-451c-bcde-b98b614b9baf
+m	java:S106%"+Replace this use of System.out by a logger.(€·ø8‘û”Ÿı1J$9424f5f3-b793-40ee-af16-61d1089a7b08
+m	java:S106("+Replace this use of System.out by a logger.(¡Ã˜Î8’û”Ÿı1J$a2df8fbf-0483-4928-88af-451155491076
+r	java:S106,"+Replace this use of System.out by a logger.(Š¿±Ğúÿÿÿÿ8’û”Ÿı1J$93bb6946-7afb-42bb-a40b-2b4558debb6c
+r	java:S106-"+Replace this use of System.out by a logger.(´œŸ¸úÿÿÿÿ8’û”Ÿı1J$877e3b5c-0e7d-4f83-b1f3-11396fdc4fa4
+m	java:S1060"+Replace this use of System.out by a logger.(—¹ˆ¡8’û”Ÿı1J$41d471ba-d03d-4815-93d7-4c63db1775c3
+m	java:S1063"+Replace this use of System.out by a logger.(¡Ã˜Î8’û”Ÿı1J$de4c5c2e-06ba-4a50-bf3f-2568b61064f2
+r	java:S1067"+Replace this use of System.out by a logger.(Š¿±Ğúÿÿÿÿ8“û”Ÿı1J$ce6f265f-d248-4bcf-a079-6021ebc9572f
+r	java:S1068"+Replace this use of System.out by a logger.(´œŸ¸úÿÿÿÿ8“û”Ÿı1J$efc51fb6-b920-433a-9b76-28d621c1bd78
+m	java:S106;"+Replace this use of System.out by a logger.(î¨– 8“û”Ÿı1J$8a32db7a-a7b1-4c48-b767-22778c017a5e
+m	java:S106@"+Replace this use of System.out by a logger.(³Ñ¤8“û”Ÿı1J$6ab14b94-1da5-44d5-8f2c-19e921f177fd
+q
+java:S1128".Remove this unused import 'java.util.Objects'.(¼¸õ›8¥ô®Ÿı1J$554de496-ca16-4d72-b8b1-e9d4967bea70
