@@ -26,11 +26,11 @@ public class ApiClient {
         String token = JwtUtil.generateJwtToken(secret);
 
         // 문자열 인코딩 (http 에러 방지)
-        String encoded_params_id = URLEncoder.encode(params_id, "UTF-8");
+        String encoded_params_id = URLEncoder.encode(params_id, "UTF-8").replace("%3D", "=");
 
         // HttpRequest 생성
         HttpRequest.Builder requestBuilder = HttpRequest.newBuilder()
-                .uri(URI.create(apiUrl + "/" + domain + "?id=" + encoded_params_id))
+                .uri(URI.create(apiUrl + "/" + domain + "?" + encoded_params_id))
                 .header("Authorization", "Bearer " + token);
 
         if ("POST".equals(method)) {
@@ -127,25 +127,28 @@ public class ApiClient {
     }
 
     public static void main(String[] args) {
-        switch (1) {
+        switch (5) {
+                // 학생
             case 1: // 조회
-                System.out.println(HttpGet("students", "학생 식별자"));
+                System.out.println(HttpGet("students", "id=학생 식별자"));
                 break;
             case 2: // 추가
-                System.out.println(HttpPost("students", "학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공\",\"grade\":\"학년\",\"name\":\"학생 이름\",\"lectures\":[\"수강 강의 ID 1\",\"수강 강의 ID 2\"],\"_id\":\"학생 식별자\"}"));
+                System.out.println(HttpPost("students", "id=학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공\",\"grade\":\"학년\",\"name\":\"학생 이름\",\"lectures\":[\"수강 강의 ID 1\",\"수강 강의 ID 2\"],\"_id\":\"학생 식별자\"}"));
                 break;
             case 3: // 수정
-                System.out.println(HttpPut("students", "학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공 수정\",\"grade\":\"학년 수정\",\"name\":\"학생 이름 수정\",\"lectures\":[\"수강 강의 ID 1 수정\",\"수강 강의 ID 2 수정\"],\"_id\":\"학생 식별자\"}"));
+                System.out.println(HttpPut("students", "id=학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공 수정\",\"grade\":\"학년 수정\",\"name\":\"학생 이름 수정\",\"lectures\":[\"수강 강의 ID 1 수정\",\"수강 강의 ID 2 수정\"],\"_id\":\"학생 식별자\"}"));
                 break;
             case 4: // 제거
-                System.out.println(HttpDelete("students", "학생 식별자"));
+                System.out.println(HttpDelete("students", "id=학생 식별자"));
                 break;
 
+
+                // 강의
             case 5: // 조회
-                System.out.println(HttpGet("lectures", "강의 식별자"));
+                System.out.println(HttpGet("lectures", "id=강의 식별자"));
                 break;
             case 6: // 추가
-                System.out.println(HttpPost("lectures", "강의 식별자", "{\n" +
+                System.out.println(HttpPost("lectures", "id=강의 식별자", "{\n" +
                         "    \"_id\": \"강의 식별자\",\n" +
                         "    \"lectureId\": \"강의 ID\",\n" +
                         "    \"name\": \"강의명\",\n" +
@@ -161,7 +164,7 @@ public class ApiClient {
                         "}"));
                 break;
             case 7:
-                System.out.println(HttpPut("lectures", "강의 식별자", "{\n" +
+                System.out.println(HttpPut("lectures", "id=강의 식별자", "{\n" +
                         "    \"_id\": \"강의 식별자\",\n" +
                         "    \"lectureId\": \"강의 ID\",\n" +
                         "    \"name\": \"강의명\",\n" +
@@ -177,7 +180,7 @@ public class ApiClient {
                         "}"));
                 break;
             case 8:
-                System.out.println(HttpDelete("lectures", "강의 식별자"));
+                System.out.println(HttpDelete("lectures", "id=강의 식별자"));
                 break;
 
             default:
