@@ -1,31 +1,34 @@
-// API 암호화 통신용 클래스
-// JWT Bearer Request Header HS256 Base64 Encoded
-// Generated JWT token: eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTcyOTg4OTV9.ep-_2oqkJzqEhLMEVL1CFmiCs7lhlovz_G7eRMpFuaw
-// Generated JWT token: eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTcyOTg5Mzh9.7HKTk_gkgvumTdGGMIg4GluZahLV-82oyZEgyY6wjTw
-
 package core;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Date;
-import java.util.Base64;
 
 public class JwtUtil {
+    public static String generateJwtToken(String secretKey) {
+        return generateJwtToken(secretKey, true, "defaultUser");
+    }
 
-    public static String generateJwtToken(String secret) {
-        // Encode the secret key using Base64
-        byte[] secretBytes = Base64.getEncoder().encode(secret.getBytes());
-        String base64Secret = new String(secretBytes);
+    public static String generateJwtToken(String secretKey, boolean useBase64Encoding) {
+        return generateJwtToken(secretKey, useBase64Encoding, "defaultUser");
+    }
+
+    public static String generateJwtToken(String secretKey, boolean useBase64Encoding, String subjectIdentifier) {
+        // Convert the secret key to bytes
+        byte[] secretKeyBytes = useBase64Encoding ? java.util.Base64.getEncoder().encode(secretKey.getBytes()) : secretKey.getBytes();
+        String secretKeyString = new String(secretKeyBytes);
 
         // Token expiration time (e.g., 1 hour from now)
-        long expirationMillis = System.currentTimeMillis() + 3600000; // 1 hour
+        Instant tokenExpirationTime = Instant.now().plus(Duration.ofHours(1));
 
         // Create a JWT token
         return Jwts.builder()
-                .setSubject("defaultUser") // Set the subject (user ID or any identifier)
-                .setExpiration(new Date(expirationMillis)) // Set token expiration time
-                .signWith(SignatureAlgorithm.HS256, base64Secret) // Sign with HS256 algorithm and secret key
+                .setSubject(subjectIdentifier) // Set the subject (user ID or any identifier)
+                .setExpiration(Date.from(tokenExpirationTime)) // Set token expiration time
+                .signWith(SignatureAlgorithm.HS256, secretKeyString) // Sign with HS256 algorithm and secret key
                 .compact();
     }
 
