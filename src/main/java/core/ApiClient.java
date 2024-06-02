@@ -18,109 +18,64 @@ public class ApiClient {
         this.secret = secret;
     }
 
-    private HttpRequest generateRequest(String domain, String paramsId, String method, String body){
+    private enum HttpMethod {
+        GET, POST, PUT, DELETE
+    }
+
+    private HttpRequest generateRequest(String domain, String paramsId, HttpMethod method, String body){
         // JWT 토큰 생성
         String token = JwtUtil.generateJwtToken(secret);
 
         // 문자열 인코딩 (http 에러 방지)
-        String encodedParamsId = URLEncoder.encode(paramsId, StandardCharsets.UTF_8).replace("%3D", "=").replace("%26", "&");
+        String encodedParamsId = URLEncoder.encode(paramsId, StandardCharsets.UTF_8);
+        encodedParamsId = encodedParamsId.replace("%3D", "=");
+        encodedParamsId = encodedParamsId.replace("%26", "&");
 
         // HttpRequest 생성
         HttpRequest.Builder requestBuilder = HttpRequest.newBuilder()
                 .uri(URI.create(apiUrl + "/" + domain + "?" + encodedParamsId))
                 .header("Authorization", "Bearer " + token);
 
-        if ("POST".equals(method)) {
+        if (method == HttpMethod.POST || method == HttpMethod.PUT) {
             requestBuilder.header("Content-Type", "application/json");
-            return requestBuilder.POST(HttpRequest.BodyPublishers.ofString(body)).build();
-        } else if ("PUT".equals(method)) {
-            requestBuilder.header("Content-Type", "application/json");
-            return requestBuilder.PUT(HttpRequest.BodyPublishers.ofString(body)).build();
-        } else if ("DELETE".equals(method)) {
-            return requestBuilder.DELETE().build();
+            return requestBuilder.method(method.name(), HttpRequest.BodyPublishers.ofString(body)).build();
         } else {
-            return requestBuilder.GET().build();
+            return requestBuilder.method(method.name(), HttpRequest.BodyPublishers.noBody()).build();
+        }
+    }
+
+    private JSONObject httpRequest(String domain, String paramsId, HttpMethod method, String body) {
+        try {
+            // 요청 보내고 응답 받기
+            HttpResponse<String> response = HttpClient.newHttpClient()
+                    .send(generateRequest(domain, paramsId, method, body), HttpResponse.BodyHandlers.ofString());
+
+            // 응답 코드 확인
+            if (response.statusCode() == 200) {
+                // 응답 본문을 JSON 객체로 변환
+                return new JSONObject(response.body());
+            } else {
+                throw new RuntimeException("HTTP error code: " + response.statusCode());
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Http " + method.name() + " error: " + e.toString());
         }
     }
 
     public JSONObject httpGet(String domain, String paramsId) {
-        try {
-            // 요청 보내고 응답 받기
-            HttpResponse<String> response = HttpClient.newHttpClient()
-                    .send(generateRequest(domain, paramsId, "GET", null), HttpResponse.BodyHandlers.ofString());
-
-            // 응답 코드 확인
-            if (response.statusCode() == 200) {
-                // 응답 본문을 JSON 객체로 변환
-                return new JSONObject(response.body());
-            } else {
-                System.out.println("HTTP error code: " + response.statusCode());
-                return null;
-            }
-        } catch (Exception e) {
-            System.out.println("Http get error: " + e.toString());
-            return null;
-        }
+        return httpRequest(domain, paramsId, HttpMethod.GET, null);
     }
 
     public JSONObject httpPost(String domain, String paramsId, String body) {
-        try {
-            // 요청 보내고 응답 받기
-            HttpResponse<String> response = HttpClient.newHttpClient()
-                    .send(generateRequest(domain, paramsId, "POST", body), HttpResponse.BodyHandlers.ofString());
-
-            // 응답 코드 확인
-            if (response.statusCode() == 200) {
-                // 응답 본문을 JSON 객체로 변환
-                return new JSONObject(response.body());
-            } else {
-                System.out.println("HTTP error code: " + response.statusCode());
-                return null;
-            }
-        } catch (Exception e) {
-            System.out.println("Http POST error: " + e.toString());
-            return null;
-        }
+        return httpRequest(domain, paramsId, HttpMethod.POST, body);
     }
 
     public JSONObject httpPut(String domain, String paramsId, String body) {
-        try {
-            // 요청 보내고 응답 받기
-            HttpResponse<String> response = HttpClient.newHttpClient()
-                    .send(generateRequest(domain, paramsId, "PUT", body), HttpResponse.BodyHandlers.ofString());
-
-            // 응답 코드 확인
-            if (response.statusCode() == 200) {
-                // 응답 본문을 JSON 객체로 변환
-                return new JSONObject(response.body());
-            } else {
-                System.out.println("HTTP error code: " + response.statusCode());
-                return null;
-            }
-        } catch (Exception e) {
-            System.out.println("Http POST error: " + e.toString());
-            return null;
-        }
+        return httpRequest(domain, paramsId, HttpMethod.PUT, body);
     }
 
     public JSONObject httpDelete(String domain, String paramsId) {
-        try {
-            // 요청 보내고 응답 받기
-            HttpResponse<String> response = HttpClient.newHttpClient()
-                    .send(generateRequest(domain, paramsId, "DELETE", null), HttpResponse.BodyHandlers.ofString());
-
-            // 응답 코드 확인
-            if (response.statusCode() == 200) {
-                // 응답 본문을 JSON 객체로 변환
-                return new JSONObject(response.body());
-            } else {
-                System.out.println("HTTP error code: " + response.statusCode());
-                return null;
-            }
-        } catch (Exception e) {
-            System.out.println("Http get error: " + e.toString());
-            return null;
-        }
+        return httpRequest(domain, paramsId, HttpMethod.DELETE, null);
     }
 
     public static void main(String[] args) {
