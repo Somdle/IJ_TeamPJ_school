@@ -7,30 +7,27 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 public class ApiClient {
-    static String apiUrl = "http://localhost:3000/api";
-    static String secret = "pcu_project";
+    private final String apiUrl;
+    private final String secret;
 
     public ApiClient(String apiUrl, String secret) {
         this.apiUrl = apiUrl;
         this.secret = secret;
     }
 
-    public ApiClient(){
-
-    }
-
-    private static HttpRequest generateRequest(String domain, String params_id, String method, String body) throws Exception {
+    private HttpRequest generateRequest(String domain, String paramsId, String method, String body){
         // JWT 토큰 생성
         String token = JwtUtil.generateJwtToken(secret);
 
         // 문자열 인코딩 (http 에러 방지)
-        String encoded_params_id = URLEncoder.encode(params_id, "UTF-8").replace("%3D", "=").replace("%26", "&");
+        String encodedParamsId = URLEncoder.encode(paramsId, StandardCharsets.UTF_8).replace("%3D", "=").replace("%26", "&");
 
         // HttpRequest 생성
         HttpRequest.Builder requestBuilder = HttpRequest.newBuilder()
-                .uri(URI.create(apiUrl + "/" + domain + "?" + encoded_params_id))
+                .uri(URI.create(apiUrl + "/" + domain + "?" + encodedParamsId))
                 .header("Authorization", "Bearer " + token);
 
         if ("POST".equals(method)) {
@@ -46,11 +43,11 @@ public class ApiClient {
         }
     }
 
-    public static JSONObject HttpGet(String domain, String params_id) {
+    public JSONObject httpGet(String domain, String paramsId) {
         try {
             // 요청 보내고 응답 받기
             HttpResponse<String> response = HttpClient.newHttpClient()
-                    .send(generateRequest(domain, params_id, "GET", null), HttpResponse.BodyHandlers.ofString());
+                    .send(generateRequest(domain, paramsId, "GET", null), HttpResponse.BodyHandlers.ofString());
 
             // 응답 코드 확인
             if (response.statusCode() == 200) {
@@ -66,11 +63,11 @@ public class ApiClient {
         }
     }
 
-    public static JSONObject HttpPost(String domain, String params_id, String body) {
+    public JSONObject httpPost(String domain, String paramsId, String body) {
         try {
             // 요청 보내고 응답 받기
             HttpResponse<String> response = HttpClient.newHttpClient()
-                    .send(generateRequest(domain, params_id, "POST", body), HttpResponse.BodyHandlers.ofString());
+                    .send(generateRequest(domain, paramsId, "POST", body), HttpResponse.BodyHandlers.ofString());
 
             // 응답 코드 확인
             if (response.statusCode() == 200) {
@@ -86,11 +83,11 @@ public class ApiClient {
         }
     }
 
-    public static JSONObject HttpPut(String domain, String params_id, String body) {
+    public JSONObject httpPut(String domain, String paramsId, String body) {
         try {
             // 요청 보내고 응답 받기
             HttpResponse<String> response = HttpClient.newHttpClient()
-                    .send(generateRequest(domain, params_id, "PUT", body), HttpResponse.BodyHandlers.ofString());
+                    .send(generateRequest(domain, paramsId, "PUT", body), HttpResponse.BodyHandlers.ofString());
 
             // 응답 코드 확인
             if (response.statusCode() == 200) {
@@ -106,11 +103,11 @@ public class ApiClient {
         }
     }
 
-    public static JSONObject HttpDelete(String domain, String params_id) {
+    public JSONObject httpDelete(String domain, String paramsId) {
         try {
             // 요청 보내고 응답 받기
             HttpResponse<String> response = HttpClient.newHttpClient()
-                    .send(generateRequest(domain, params_id, "DELETE", null), HttpResponse.BodyHandlers.ofString());
+                    .send(generateRequest(domain, paramsId, "DELETE", null), HttpResponse.BodyHandlers.ofString());
 
             // 응답 코드 확인
             if (response.statusCode() == 200) {
@@ -127,28 +124,30 @@ public class ApiClient {
     }
 
     public static void main(String[] args) {
+        ApiClient apiClient = new ApiClient("http://localhost:3000/api", "pcu_project");
+
         switch (1) {
                 // 학생
             case 1: // 조회
-                System.out.println(HttpGet("students", "id=학생 식별자"));
+                System.out.println(apiClient.httpGet("students", "id=학생 식별자"));
                 break;
             case 2: // 추가
-                System.out.println(HttpPost("students", "id=학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공\",\"grade\":\"학년\",\"name\":\"학생 이름\",\"lectures\":[\"수강 강의 ID 1\",\"수강 강의 ID 2\"],\"_id\":\"학생 식별자\"}"));
+                System.out.println(apiClient.httpPost("students", "id=학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공\",\"grade\":\"학년\",\"name\":\"학생 이름\",\"lectures\":[\"수강 강의 ID 1\",\"수강 강의 ID 2\"],\"_id\":\"학생 식별자\"}"));
                 break;
             case 3: // 수정
-                System.out.println(HttpPut("students", "id=학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공 수정\",\"grade\":\"학년 수정\",\"name\":\"학생 이름 수정\",\"lectures\":[\"수강 강의 ID 1 수정\",\"수강 강의 ID 2 수정\"],\"_id\":\"학생 식별자\"}"));
+                System.out.println(apiClient.httpPut("students", "id=학생 식별자", "{\"studentId\":\"학생 ID\",\"major\":\"전공 수정\",\"grade\":\"학년 수정\",\"name\":\"학생 이름 수정\",\"lectures\":[\"수강 강의 ID 1 수정\",\"수강 강의 ID 2 수정\"],\"_id\":\"학생 식별자\"}"));
                 break;
             case 4: // 제거
-                System.out.println(HttpDelete("students", "id=학생 식별자"));
+                System.out.println(apiClient.httpDelete("students", "id=학생 식별자"));
                 break;
 
 
                 // 강의
             case 5: // 조회
-                System.out.println(HttpGet("lectures", "id=강의 식별자"));
+                System.out.println(apiClient.httpGet("lectures", "id=강의 식별자"));
                 break;
             case 6: // 추가
-                System.out.println(HttpPost("lectures", "id=강의 식별자", "{\n" +
+                System.out.println(apiClient.httpPost("lectures", "id=강의 식별자", "{\n" +
                         "    \"_id\": \"강의 식별자\",\n" +
                         "    \"lectureId\": \"강의 ID\",\n" +
                         "    \"name\": \"강의명\",\n" +
@@ -164,7 +163,7 @@ public class ApiClient {
                         "}"));
                 break;
             case 7:
-                System.out.println(HttpPut("lectures", "id=강의 식별자", "{\n" +
+                System.out.println(apiClient.httpPut("lectures", "id=강의 식별자", "{\n" +
                         "    \"_id\": \"강의 식별자\",\n" +
                         "    \"lectureId\": \"강의 ID\",\n" +
                         "    \"name\": \"강의명\",\n" +
@@ -180,16 +179,16 @@ public class ApiClient {
                         "}"));
                 break;
             case 8:
-                System.out.println(HttpDelete("lectures", "id=강의 식별자"));
+                System.out.println(apiClient.httpDelete("lectures", "id=강의 식별자"));
                 break;
 
 
                 // 학생 강의 매칭
             case 9:
-                System.out.println(HttpPost("studentsLectures", "studentId=학생 식별자&lectureId=강의 식별자", ""));
+                System.out.println(apiClient.httpPost("studentsLectures", "studentId=학생 식별자&lectureId=강의 식별자", ""));
                 break;
             case 10:
-                System.out.println(HttpDelete("studentsLectures", "studentId=학생 식별자&lectureId=강의 식별자"));
+                System.out.println(apiClient.httpDelete("studentsLectures", "studentId=학생 식별자&lectureId=강의 식별자"));
                 break;
 
             default:

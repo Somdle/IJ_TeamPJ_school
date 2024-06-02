@@ -16,6 +16,9 @@ public class App {
     }
 
     public static void main(String[] args) {
+        // api객체
+        ApiClient apiClient = new ApiClient("http://localhost:3000/api", "pcu_project");
+
         // 받아온 정보를 처리할 객체
         Student student;
         Lecture lecture;
@@ -36,22 +39,22 @@ public class App {
                 case 1: // 추가
                     System.out.println("추가할 강의 ID를 입력하세요.");
                     lectureId = new Scanner(System.in).nextLine();
-                    ans = ApiClient.HttpPost("studentsLectures", "studentId=학생 식별자&lectureId=" + lectureId, "");
+                    ans = apiClient.httpPost("studentsLectures", "studentId=학생 식별자&lectureId=" + lectureId, "");
                     System.out.println("DB 처리결과: " + ans);
 
-                    student = new Student(ApiClient.HttpGet("students", "id=학생 식별자"));
-                    lecture = new Lecture(ApiClient.HttpGet("lectures", "id=" + lectureId));
+                    student = new Student(apiClient.httpGet("students", "id=학생 식별자"));
+                    lecture = new Lecture(apiClient.httpGet("lectures", "id=" + lectureId));
                     System.out.println("학생 처리결과: " + student.getLecturesIds());
                     System.out.println("강의 처리결과: " + lecture.getStudents());
                     break;
                 case 2: // 제거
                     System.out.println("제거할 강의 ID를 입력하세요.");
                     lectureId = new Scanner(System.in).nextLine();
-                    ans = ApiClient.HttpDelete("studentsLectures", "studentId=학생 식별자&lectureId=" + lectureId);
+                    ans = apiClient.httpDelete("studentsLectures", "studentId=학생 식별자&lectureId=" + lectureId);
                     System.out.println("DB 처리결과: " + ans);
 
-                    student = new Student(ApiClient.HttpGet("students", "id=학생 식별자"));
-                    lecture = new Lecture(ApiClient.HttpGet("lectures", "id=" + lectureId));
+                    student = new Student(apiClient.httpGet("students", "id=학생 식별자"));
+                    lecture = new Lecture(apiClient.httpGet("lectures", "id=" + lectureId));
                     System.out.println("학생 처리결과: " + student.getLecturesIds());
                     System.out.println("강의 처리결과: " + lecture.getStudents());
                     break;
