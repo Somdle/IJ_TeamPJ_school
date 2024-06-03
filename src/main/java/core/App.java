@@ -14,6 +14,7 @@ public class App {
         System.out.println("1. 강의 추가");
         System.out.println("2. 강의 제거");
         System.out.println("3. 강의 내용 추가: ");
+        System.out.println("4. 강의 내용 제거: ");
         System.out.println("메뉴를 선택하세요: ");
         return Integer.parseInt(new Scanner(System.in).nextLine());
     }
@@ -87,8 +88,15 @@ public class App {
                     ans = apiClient.httpPost("lectures", "", temp_Lecture.toJSON().toString());
                     System.out.println("DB 처리결과: " + ans);
                     break;
+
+                case 4:
+                    System.out.println("제거할 강의 id: ");
+                    String temp_d_lectureId = new Scanner(System.in).nextLine();
+                    ans = apiClient.httpDelete("lectures", "id=" + temp_d_lectureId);
+                    System.out.println("DB 처리결과: " + ans);
+                    break;
                 default:
-                    System.out.println("Usage: 0 ~ 3");
+                    System.out.println("Usage: 0 ~ 4");
                     break;
             }
 
