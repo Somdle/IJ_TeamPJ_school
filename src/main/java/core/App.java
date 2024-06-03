@@ -1,7 +1,9 @@
 package core;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -11,11 +13,12 @@ public class App {
         System.out.println("0. 종료");
         System.out.println("1. 강의 추가");
         System.out.println("2. 강의 제거");
+        System.out.println("3. 강의 내용 추가: ");
         System.out.println("메뉴를 선택하세요: ");
         return Integer.parseInt(new Scanner(System.in).nextLine());
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JSONException {
         // api객체
         ApiClient apiClient = new ApiClient("http://localhost:3000/api", "pcu_project");
 
@@ -58,8 +61,34 @@ public class App {
                     System.out.println("학생 처리결과: " + student.getLecturesIds());
                     System.out.println("강의 처리결과: " + lecture.getStudents());
                     break;
+                case 3: // 강의 추가
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("id, 강의식별자: ");
+                    String temp_id = scanner.next();
+                    System.out.print("lectureId, 강의 id: ");
+                    String temp_lectureId = scanner.next();
+                    System.out.print("name, 강의명: ");
+                    String temp_name = scanner.next();
+                    System.out.print("professor, 담당교수: ");
+                    String temp_professor = scanner.next();
+                    System.out.print("classRoom, 강의실 위치: ");
+                    String temp_classRoom = scanner.next();
+                    System.out.print("date, 강의 날짜: ");
+                    String temp_date = scanner.next();
+                    System.out.print("startTime, 강의 시작 시간 (교시 단위): ");
+                    String temp_startTime = scanner.next();
+                    System.out.print("endTime, 강의 종료 시간 (교시 단위): ");
+                    String temp_endTime = scanner.next();
+
+                    ArrayList<String> temp_studentIds = new ArrayList<>();
+
+                    Lecture temp_Lecture = new Lecture(temp_id, temp_lectureId, temp_name, temp_professor, temp_classRoom, temp_date, temp_startTime, temp_endTime, temp_studentIds);
+
+                    ans = apiClient.httpPost("lectures", "", temp_Lecture.toJSON().toString());
+                    System.out.println("DB 처리결과: " + ans);
+                    break;
                 default:
-                    System.out.println("Usage: 0 ~ 2");
+                    System.out.println("Usage: 0 ~ 3");
                     break;
             }
 
