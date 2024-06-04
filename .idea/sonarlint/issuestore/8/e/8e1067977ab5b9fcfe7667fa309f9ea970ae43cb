@@ -1,50 +1,50 @@
 
 Œ
-java:S1192"IDefine a constant instead of duplicating this literal "students" 3 times.(øâè©8œ·¶†ş1J$895bdef4-f6c2-4aa9-aefa-d2b5f1dcb3e1
+java:S1192"IDefine a constant instead of duplicating this literal "students" 3 times.(øâè©8œ·¶†ş1J$68d8cdc3-0892-4d96-bb23-00059d22d85a
 •
-java:S11922"RDefine a constant instead of duplicating this literal "DB ì²˜ë¦¬ê²°ê³¼: " 4 times.(¡Ã˜Î8™¨É†ş1J$92fc915c-ac54-450d-81c7-bdf56f4db95f
+java:S11922"RDefine a constant instead of duplicating this literal "DB ì²˜ë¦¬ê²°ê³¼: " 4 times.(¡Ã˜Î8™¨É†ş1J$e2b12550-3892-4ca9-9c13-9e6bae9e4fd3
 Œ
-java:S11925"IDefine a constant instead of duplicating this literal "lectures" 4 times.(ĞÕè8š¨É†ş1J$29efa968-85c3-4887-84cf-ca3f12d6d65d
-˜	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ„š‚ûÿÿÿÿ8·¶†ş1J$3d55d096-834b-44cf-b27c-28104b755790
-˜	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¡›ıÿÿÿÿ8·¶†ş1J$0e31ec75-77a9-4501-b79e-7f6f1debf4b9
-“	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òúˆ—8·¶†ş1J$b0405985-904c-44da-8067-191eb3dd564f
-˜	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ÓìÆûÿÿÿÿ8·¶†ş1J$965b81ec-4085-41d9-8381-3c05d2c5d9b4
-“	java:S117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ½óÂ8·¶†ş1J$7137026e-6284-49a1-9f7d-19f3a6b251dc
-˜	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Ò×—ıÿÿÿÿ8·¶†ş1J$d8a57c13-e981-4c34-b4eb-835708f63612
-“	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì³ªå8·¶†ş1J$f8d5f194-6f84-437d-bda2-4ac532468f50
-˜	java:S117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ûş”Şùÿÿÿÿ8·¶†ş1J$adbce92f-b24c-4499-8790-f4c5e8a78d44
-˜	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã‘‹»ÿÿÿÿÿ8·¶†ş1J$a8307798-5ad8-4571-89be-e827a3655a1b
-“	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å¡”Î8·¶†ş1J$41327b72-a2a0-4096-a281-3c9b305db6ca
-˜	java:S117a"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¢Øúúÿÿÿÿ8·¶†ş1J$6c6d9a2d-2b01-451f-82db-6083d59ddb87
+java:S11925"IDefine a constant instead of duplicating this literal "lectures" 4 times.(ĞÕè8š¨É†ş1J$78a844b8-4ded-4aae-99de-e5202b8a390e
+˜	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ„š‚ûÿÿÿÿ8·¶†ş1J$d988a515-b861-4ff8-86c3-35ccba6e49f4
+˜	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¡›ıÿÿÿÿ8·¶†ş1J$e51d838c-ce12-41b0-975a-b6f222919968
+“	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òúˆ—8·¶†ş1J$c750cd3b-6e91-4787-b66e-bc71ddef167d
+˜	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ÓìÆûÿÿÿÿ8·¶†ş1J$b173ca67-b1da-4c61-aef0-1a67507baeea
+“	java:S117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ½óÂ8·¶†ş1J$bdba1f40-ff04-42c5-a0ec-ef569a8bd0cc
+˜	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Ò×—ıÿÿÿÿ8·¶†ş1J$756c944a-0d58-464d-9f66-be80d9b6fe1a
+“	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì³ªå8·¶†ş1J$2826deb7-87ba-4433-a2d8-5fbb127822ea
+˜	java:S117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ûş”Şùÿÿÿÿ8·¶†ş1J$e73dce64-c1f7-449c-883a-d7c8c2e3777a
+˜	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã‘‹»ÿÿÿÿÿ8·¶†ş1J$9de1e1e5-cd26-4779-9be9-d6289517d2ba
+“	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å¡”Î8·¶†ş1J$98f17c04-e318-4aa4-93ab-f533a091ec2c
+˜	java:S117a"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¢Øúúÿÿÿÿ8·¶†ş1J$e972d16d-33ed-4165-b718-22a90ad9e9b4
 ‡
-java:S2583j"DChange this condition so that it does not always evaluate to "false"(Û‚Äî8™¸¶†ş1J$6a2b2306-4e11-404d-bf4d-c35d1cdbd0b5
-r	java:S106"+Replace this use of System.out by a logger.(ÓŠ£µıÿÿÿÿ8¸¶†ş1J$77efaab9-7630-4c5a-abf8-745efaaaad9a
-m	java:S106"+Replace this use of System.out by a logger.(” ê»8¸¶†ş1J$3c390f74-c52c-4356-ac57-6e73a461e6d2
-m	java:S106"+Replace this use of System.out by a logger.(¯éè¶8¸¶†ş1J$96c0c41e-daf8-468e-a9b1-bd000c4098a1
-m	java:S106"+Replace this use of System.out by a logger.(ÄÅ†“8¸¶†ş1J$081415b0-2496-405e-bec9-7bff5902d1c6
-r	java:S106"+Replace this use of System.out by a logger.(ñú¯÷ûÿÿÿÿ8¸¶†ş1J$b86066ce-3b0f-4675-a891-9ed739f86a17
-r	java:S106"+Replace this use of System.out by a logger.(šçÑ•ıÿÿÿÿ8¸¶†ş1J$f3e47e36-9e80-4d81-91cf-64aa323de30a
-m	java:S106"+Replace this use of System.out by a logger.(ÇĞÖ8¸¶†ş1J$32ed2b6e-a1e0-4596-84bd-b9914391c7ee
-m	java:S106/"+Replace this use of System.out by a logger.(€·ø8¥¸¶†ş1J$a1b4c86d-7ed0-42ec-bbfe-ffaed85b2fe3
-m	java:S1062"+Replace this use of System.out by a logger.(¡Ã˜Î8­¸¶†ş1J$45f8812b-7195-4dc7-97bd-e620c5e00c6d
-r	java:S1066"+Replace this use of System.out by a logger.(Š¿±Ğúÿÿÿÿ8­¸¶†ş1J$29332de7-7756-4116-b397-bbca9395819c
-r	java:S1067"+Replace this use of System.out by a logger.(´œŸ¸úÿÿÿÿ8®¸¶†ş1J$fadfd939-e3db-48ba-b0ee-574fc980f96c
-m	java:S106:"+Replace this use of System.out by a logger.(—¹ˆ¡8¯¸¶†ş1J$76cf4885-8c20-4baa-9f47-2ae34622a80d
-m	java:S106="+Replace this use of System.out by a logger.(¡Ã˜Î8¯¸¶†ş1J$0a11e6e8-1ec0-4538-82e5-84b4b80f08da
-r	java:S106A"+Replace this use of System.out by a logger.(Š¿±Ğúÿÿÿÿ8¯¸¶†ş1J$11ae3ac2-0736-4682-bf76-ad6e861697a7
-r	java:S106B"+Replace this use of System.out by a logger.(´œŸ¸úÿÿÿÿ8°¸¶†ş1J$5401652d-b0f9-4967-8036-b7d7ce448808
-r	java:S106F"+Replace this use of System.out by a logger.(ÙÉºªÿÿÿÿÿ8°¸¶†ş1J$7f13b661-8612-43ae-b545-6805c760238e
-m	java:S106H"+Replace this use of System.out by a logger.(úığ˜8°¸¶†ş1J$2d0cb152-d6b5-462f-9d9f-355f8d30cb5b
-m	java:S106J"+Replace this use of System.out by a logger.(É¢Õú8±¸¶†ş1J$7b712453-4e1f-44c0-a5ee-e9a8a8de1b18
-m	java:S106L"+Replace this use of System.out by a logger.(‚ÌÜ8²¸¶†ş1J$4185ac73-108a-44a6-b410-0acaab3d6cc6
-m	java:S106N"+Replace this use of System.out by a logger.(ÂÊÍµ8²¸¶†ş1J$2ed0f78c-9c43-4df4-9017-9f783a91bac7
-l	java:S106P"+Replace this use of System.out by a logger.(¼­Îh8³¸¶†ş1J$840e2500-3d58-44c7-a68d-7f80acdb5757
-r	java:S106R"+Replace this use of System.out by a logger.(®´Íşÿÿÿÿ8³¸¶†ş1J$37628878-99b3-4543-a068-21f5e7dd11bd
-m	java:S106T"+Replace this use of System.out by a logger.(„âÅœ8´¸¶†ş1J$f9290921-84bf-44b2-8785-a5c789b644d2
-m	java:S106\"+Replace this use of System.out by a logger.(¡Ã˜Î8õ¨É†ş1J$f1813a79-0c26-4559-b41e-806c59524a82
-r	java:S106`"+Replace this use of System.out by a logger.(˜§ıÜÿÿÿÿÿ8õ¨É†ş1J$2fcced6c-998b-4d0b-ae06-3dcb21968fbd
-m	java:S106c"+Replace this use of System.out by a logger.(¡Ã˜Î8ö¨É†ş1J$cd772df1-ab2d-4a38-a017-6b333a5592c2
-r	java:S106f"+Replace this use of System.out by a logger.(Û»şÆûÿÿÿÿ8ö¨É†ş1J$39d1cfd4-3380-4100-a193-85c511ef6c71
-m	java:S106k"+Replace this use of System.out by a logger.(³Ñ¤8ö¨É†ş1J$582e583e-7db4-4473-b900-a713c6297f72
+java:S2583j"DChange this condition so that it does not always evaluate to "false"(Û‚Äî8™¸¶†ş1J$5442c158-ea59-4756-9c08-6b1b168816dd
+r	java:S106"+Replace this use of System.out by a logger.(ÓŠ£µıÿÿÿÿ8¸¶†ş1J$33135ac7-3271-4030-ba42-f637532e50ee
+m	java:S106"+Replace this use of System.out by a logger.(” ê»8¸¶†ş1J$7fbd5677-bb51-434b-a417-12f25cac31b3
+m	java:S106"+Replace this use of System.out by a logger.(¯éè¶8¸¶†ş1J$3302c9c2-1a17-4c7f-8073-96fceb708329
+m	java:S106"+Replace this use of System.out by a logger.(ÄÅ†“8¸¶†ş1J$49efe9e1-3112-430b-9b98-9d5f39f821b1
+r	java:S106"+Replace this use of System.out by a logger.(ñú¯÷ûÿÿÿÿ8¸¶†ş1J$4765ccbb-9dcb-4976-aa4a-c38ec80e81c9
+r	java:S106"+Replace this use of System.out by a logger.(šçÑ•ıÿÿÿÿ8¸¶†ş1J$1854724c-49c8-4574-9755-26fcce38d082
+m	java:S106"+Replace this use of System.out by a logger.(ÇĞÖ8¸¶†ş1J$ac4ac895-116a-4391-98d9-5b40e6e1ba4e
+m	java:S106/"+Replace this use of System.out by a logger.(€·ø8¥¸¶†ş1J$5984375f-ddf4-4455-96d6-9c3ee8f8df09
+m	java:S1062"+Replace this use of System.out by a logger.(¡Ã˜Î8­¸¶†ş1J$6b4d8261-c724-489d-8873-97923f418a96
+r	java:S1066"+Replace this use of System.out by a logger.(Š¿±Ğúÿÿÿÿ8­¸¶†ş1J$9dde4c2f-a1ac-4f7b-8828-036d75c65a77
+r	java:S1067"+Replace this use of System.out by a logger.(´œŸ¸úÿÿÿÿ8®¸¶†ş1J$d13c983c-0338-4700-885f-db09d5ee29ea
+m	java:S106:"+Replace this use of System.out by a logger.(—¹ˆ¡8¯¸¶†ş1J$d755b852-82f6-46e6-80b3-03fbe2008279
+m	java:S106="+Replace this use of System.out by a logger.(¡Ã˜Î8¯¸¶†ş1J$7aab5a0a-29bb-48b8-9179-634f29d955fc
+r	java:S106A"+Replace this use of System.out by a logger.(Š¿±Ğúÿÿÿÿ8¯¸¶†ş1J$1187d88c-a63a-4d7b-b92c-3d5fc002770a
+r	java:S106B"+Replace this use of System.out by a logger.(´œŸ¸úÿÿÿÿ8°¸¶†ş1J$b295d54b-6f02-4d4f-859d-90072f1e67e1
+r	java:S106F"+Replace this use of System.out by a logger.(ÙÉºªÿÿÿÿÿ8°¸¶†ş1J$a42bc71e-5460-4b66-8c1a-b51fc08b26d0
+m	java:S106H"+Replace this use of System.out by a logger.(úığ˜8°¸¶†ş1J$e64ed10b-61fb-42d7-8e6e-aa32f6409ce4
+m	java:S106J"+Replace this use of System.out by a logger.(É¢Õú8±¸¶†ş1J$80f81e45-f02b-403b-abca-72ef4761f389
+m	java:S106L"+Replace this use of System.out by a logger.(‚ÌÜ8²¸¶†ş1J$831e7dbc-cd39-451c-a168-60558a3b5542
+m	java:S106N"+Replace this use of System.out by a logger.(ÂÊÍµ8²¸¶†ş1J$37a219ec-2f67-4f88-8c43-b5793bbfa6a1
+l	java:S106P"+Replace this use of System.out by a logger.(¼­Îh8³¸¶†ş1J$585368c3-7573-4c7f-9e76-fb8c616a1cee
+r	java:S106R"+Replace this use of System.out by a logger.(®´Íşÿÿÿÿ8³¸¶†ş1J$65c3d9ee-053f-49ba-8818-f986e153b7be
+m	java:S106T"+Replace this use of System.out by a logger.(„âÅœ8´¸¶†ş1J$a62c134e-1f43-4a9c-8e6a-c67280ba41e9
+m	java:S106\"+Replace this use of System.out by a logger.(¡Ã˜Î8õ¨É†ş1J$fbe97cf3-99cd-4700-bcbc-e64df3a01edc
+r	java:S106`"+Replace this use of System.out by a logger.(˜§ıÜÿÿÿÿÿ8õ¨É†ş1J$181ee483-a037-4b46-b1e6-4861007b135d
+m	java:S106c"+Replace this use of System.out by a logger.(¡Ã˜Î8ö¨É†ş1J$ba5d9ce7-df58-4ea0-84be-58dcbe1d20f3
+r	java:S106f"+Replace this use of System.out by a logger.(Û»şÆûÿÿÿÿ8ö¨É†ş1J$eb555abe-a147-45de-b189-4b33c8b205fc
+m	java:S106k"+Replace this use of System.out by a logger.(³Ñ¤8ö¨É†ş1J$bcac22ee-b270-4e46-9b87-204d73a7482c
 q
-java:S1128".Remove this unused import 'java.util.Objects'.(¼¸õ›8µ¸¶†ş1J$bfd1a41e-b6b2-41fd-be94-78aadca8fb61
+java:S1128".Remove this unused import 'java.util.Objects'.(¼¸õ›8µ¸¶†ş1J$243c37c9-ec82-4282-8c1c-e19ef27db2ee

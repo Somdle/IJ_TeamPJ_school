@@ -36,7 +36,7 @@ public class JwtUtil {
         String token = generateJwtToken("pcu_project");
         System.out.println("Generated JWT token: " + token);
 
-        ApiClient apiClient = new ApiClient("http://localhost:3000/api", "pcu_project");
+        ApiClient apiClient = new ApiClient("http://somdlesupport.iptime.org:3003/api", "pcu_project");
         System.out.println(apiClient.httpGet("students", "id=학생 식별자"));
     }
 }

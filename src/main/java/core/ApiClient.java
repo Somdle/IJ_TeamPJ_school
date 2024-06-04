@@ -79,7 +79,7 @@ public class ApiClient {
     }
 
     public static void main(String[] args) {
-        ApiClient apiClient = new ApiClient("http://localhost:3000/api", "pcu_project");
+        ApiClient apiClient = new ApiClient("http://somdlesupport.iptime.org:3003/api", "pcu_project");
 
         switch (1) {
                 // 학생

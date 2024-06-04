@@ -21,7 +21,7 @@ public class App {
 
     public static void main(String[] args) throws JSONException {
         // api객체
-        ApiClient apiClient = new ApiClient("http://localhost:3000/api", "pcu_project");
+        ApiClient apiClient = new ApiClient("http://somdlesupport.iptime.org:3003/api", "pcu_project");
 
         // 타겟 학생
         Student targetStudent = new Student(apiClient.httpGet("students", "id=학생 식별자"));
