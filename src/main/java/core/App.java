@@ -13,8 +13,10 @@ public class App {
         System.out.println("0. 종료");
         System.out.println("1. 강의 추가");
         System.out.println("2. 강의 제거");
-        System.out.println("3. 강의 내용 추가: ");
-        System.out.println("4. 강의 내용 제거: ");
+        System.out.println("3. 강의 내용 추가");
+        System.out.println("4. 강의 내용 제거");
+        System.out.println("5. 전체 학생 조회");
+        System.out.println("6. 전체 강의 조회");
         System.out.println("메뉴를 선택하세요: ");
         return Integer.parseInt(new Scanner(System.in).nextLine());
     }
@@ -98,8 +100,19 @@ public class App {
                     ans = apiClient.httpDelete("lectures", "id=" + temp_d_lectureId);
                     System.out.println("DB 처리결과: " + ans);
                     break;
+
+                case 5:
+                    ans = apiClient.httpGet("students", "id=");
+                    System.out.println("DB 처리결과: " + ans.toString(2));
+                    break;
+
+                case 6:
+                    ans = apiClient.httpGet("lectures", "id=");
+                    System.out.println("DB 처리결과: " + ans.toString(2));
+                    break;
+
                 default:
-                    System.out.println("Usage: 0 ~ 4");
+                    System.out.println("Usage: 0 ~ 6");
                     break;
             }
 
