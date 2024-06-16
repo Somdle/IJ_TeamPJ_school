@@ -11,7 +11,7 @@ public class App {
     public static int printMenu(){
         System.out.println("메뉴");
         System.out.println("0. 종료");
-        System.out.println("1. 강의 추가");
+        System.out.println("1. 강의 추가"); //현식
         System.out.println("2. 강의 제거");
         System.out.println("3. 강의 내용 추가");
         System.out.println("4. 강의 내용 제거");
