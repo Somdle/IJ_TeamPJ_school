@@ -20,7 +20,7 @@ public class App {
         System.out.println("메뉴를 선택하세요: ");
         return Integer.parseInt(new Scanner(System.in).nextLine());
     }
-
+    // test
     public static void main(String[] args) throws JSONException {
         // api객체
         ApiClient apiClient = new ApiClient("http://somdlesupport.iptime.org:3003/api", "pcu_project");
