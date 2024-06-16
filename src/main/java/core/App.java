@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class App {
     public static int printMenu(){
         System.out.println("메뉴"); // 이것은 규석의 주석입니다.
-        System.out.println("0. 종료");
+        System.out.println("0. 종료");// 조상우
         System.out.println("1. 강의 추가");
         System.out.println("2. 강의 제거");
         System.out.println("3. 강의 내용 추가");
