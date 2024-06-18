@@ -78,6 +78,41 @@ public class ApiClient {
         return httpRequest(domain, paramsId, HttpMethod.DELETE, null);
     }
 
+
+    // 추가: 게시물 추가
+    public JSONObject addPost(String title, String content, String author) {
+        String body = String.format("{\"title\":\"%s\",\"content\":\"%s\",\"author\":\"%s\"}", title, content, author);
+        return httpPost("posts", "", body);
+    }
+
+    // 추가: 게시물 수정
+    public JSONObject updatePost(String postId, String title, String content, String author) {
+        String body = String.format("{\"title\":\"%s\",\"content\":\"%s\",\"author\":\"%s\"}", title, content, author);
+        return httpPut("posts", "id=" + postId, body);
+    }
+
+    // 추가: 게시물 삭제
+    public JSONObject deletePost(String postId) {
+        return httpDelete("posts", "id=" + postId);
+    }
+
+    // 추가: 댓글 추가
+    public JSONObject addComment(String postId, String content, String author) {
+        String body = String.format("{\"content\":\"%s\",\"author\":\"%s\"}", content, author);
+        return httpPost("comments", "postId=" + postId, body);
+    }
+
+    // 추가: 댓글 수정
+    public JSONObject updateComment(String commentId, String content, String author) {
+        String body = String.format("{\"content\":\"%s\",\"author\":\"%s\"}", content, author);
+        return httpPut("comments", "id=" + commentId, body);
+    }
+
+    // 추가: 댓글 삭제
+    public JSONObject deleteComment(String commentId) {
+        return httpDelete("comments", "id=" + commentId);
+    }
+
     public static void main(String[] args) {
         ApiClient apiClient = new ApiClient("http://somdlesupport.iptime.org:3003/api", "pcu_project");
 
@@ -95,7 +130,6 @@ public class ApiClient {
             case 4: // 제거
                 System.out.println(apiClient.httpDelete("students", "id=학생 식별자"));
                 break;
-
 
                 // 강의
             case 5: // 조회
@@ -138,11 +172,33 @@ public class ApiClient {
                 break;
 
 
+            // 게시물
+            case 9: // 추가
+                System.out.println(apiClient.addPost("제목", "내용", "작성자"));
+                break;
+            case 10: // 수정
+                System.out.println(apiClient.updatePost("게시물 ID", "수정된 제목", "수정된 내용", "작성자"));
+                break;
+            case 11: // 삭제
+                System.out.println(apiClient.deletePost("게시물 ID"));
+                break;
+
+            // 댓글
+            case 12: // 추가
+                System.out.println(apiClient.addComment("게시물 ID", "댓글 내용", "댓글 작성자"));
+                break;
+            case 13: // 수정
+                System.out.println(apiClient.updateComment("댓글 ID", "수정된 댓글 내용", "댓글 작성자"));
+                break;
+            case 14: // 삭제
+                System.out.println(apiClient.deleteComment("댓글 ID"));
+                break;
+
                 // 학생 강의 매칭
-            case 9:
+            case 15:
                 System.out.println(apiClient.httpPost("studentsLectures", "studentId=학생 식별자&lectureId=강의 식별자", ""));
                 break;
-            case 10:
+            case 16:
                 System.out.println(apiClient.httpDelete("studentsLectures", "studentId=학생 식별자&lectureId=강의 식별자"));
                 break;
 

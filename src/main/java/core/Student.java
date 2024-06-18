@@ -110,6 +110,11 @@ public class Student {
         return lecturesIds;
     }
 
+//    public List<String> getPostIds() {
+//        return postIds;
+//    }
+
+
     public void setLecturesIds(List<String> lecturesIds) {
         this.lecturesIds = lecturesIds;
     }
