@@ -17,6 +17,8 @@ public class App {
         System.out.println("4. 강의 내용 제거");
         System.out.println("5. 전체 학생 조회");
         System.out.println("6. 전체 강의 조회");
+        System.out.println("7. 학생 시간표 조회"); // 추가한 코드(재영)
+        System.out.println("8. 학생 시간표 수정"); // 추가한 코드(재영)
         System.out.println("메뉴를 선택하세요: ");
         return Integer.parseInt(new Scanner(System.in).nextLine());
     }
@@ -27,6 +29,9 @@ public class App {
 
         // 타겟 학생
         Student targetStudent = new Student(apiClient.httpGet("students", "id=학생 식별자"));
+
+        // 시간표 사용 예시
+        targetStudent.addToTimetable(new Lecture("1", "lecture1", "웹프로그래밍", "임선영 교수", "A 강의실", "2024-06-20", "9", "11", new ArrayList<>()));
 
         // API결과 확인용 변수
         Student student;
@@ -110,6 +115,22 @@ public class App {
                     ans = apiClient.httpGet("lectures", "id=");
                     System.out.println("DB 처리결과: " + ans.toString(2));
                     break;
+
+                case 7: // 학생 시간표 조회
+                    System.out.println("학생 시간표:");
+                    for (Lecture lecture : targetStudent.getTimetable().getLectures()) {
+                        System.out.println(lecture.getName() + " - " + lecture.getDate() + ", " + lecture.getStartTime() + " ~ " + lecture.getEndTime());
+                    }
+                    break;
+                case 8: // 학생 시간표 수정
+                    // 예제: 시간표에 강의 추가
+                    System.out.println("추가할 강의 ID를 입력하세요.");
+                    String lectureId = new Scanner(System.in).nextLine();
+                    Lecture lectureToAdd = new Lecture(apiClient.httpGet("lectures", "id=" + lectureId));
+                    targetStudent.addToTimetable(lectureToAdd);
+                    System.out.println("강의가 시간표에 추가되었습니다.");
+                    break;
+                default:
 
                 default:
                     System.out.println("Usage: 0 ~ 6");
